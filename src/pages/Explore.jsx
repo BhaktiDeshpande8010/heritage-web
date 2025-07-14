@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { HeartIcon } from "@heroicons/react/24/solid";
 import { FaMapMarkerAlt, FaStar } from "react-icons/fa";
 import Navbar from "../components/Navbar";
@@ -90,6 +91,8 @@ const allProperties = [
     image: "/images/explore-1.png",
   },
 ];
+
+const navigate = useNavigate();
 
 const Explore = () => {
   const [visibleCount, setVisibleCount] = useState(8); // Show first 8 cards initially
