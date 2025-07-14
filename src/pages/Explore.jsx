@@ -92,13 +92,12 @@ const allProperties = [
   },
 ];
 
-const navigate = useNavigate();
-
 const Explore = () => {
-  const [visibleCount, setVisibleCount] = useState(8); // Show first 8 cards initially
+  const [visibleCount, setVisibleCount] = useState(8);
+  const navigate = useNavigate();
 
   const loadMore = () => {
-    setVisibleCount((prev) => prev + 4); // Load 4 more on each click
+    setVisibleCount((prev) => prev + 4);
   };
 
   return (
@@ -121,7 +120,8 @@ const Explore = () => {
           {allProperties.slice(0, visibleCount).map((prop, index) => (
             <div
               key={index}
-              className="relative bg-white rounded-xl shadow hover:shadow-lg transition overflow-hidden"
+              onClick={() => navigate("/PropertyDel", { state: prop })}
+              className="cursor-pointer relative bg-white rounded-xl shadow hover:shadow-lg transition overflow-hidden"
             >
               <img
                 src={prop.image}
