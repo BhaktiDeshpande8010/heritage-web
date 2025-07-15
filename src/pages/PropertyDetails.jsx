@@ -103,37 +103,56 @@ const PropertyDetails = () => {
         </div>
 
         {/* Booking Section */}
-        <div className="mt-12 bg-[#f8f4ec] p-6 rounded-xl">
-          <h2 className="text-2xl font-bold mb-4">Book Your Stay</h2>
+        {/* Booking Section */}
+        <div className="mt-12 bg-[#f8f4ec] p-6 rounded-xl shadow-md">
+          <h2 className="text-2xl font-bold mb-4 text-[#a67d4b]">Book Your Stay</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <input
               type="date"
-              className="border p-3 rounded-md text-gray-700 bg-white"
+              placeholder="Check-in Date"
+              className="border border-gray-300 px-4 py-3 rounded-md bg-white text-gray-700 shadow-sm focus:outline-none focus:ring-2 focus:ring-[#a67d4b]"
             />
             <input
               type="date"
-              className="border p-3 rounded-md text-gray-700 bg-white"
+              placeholder="Check-out Date"
+              className="border border-gray-300 px-4 py-3 rounded-md bg-white text-gray-700 shadow-sm focus:outline-none focus:ring-2 focus:ring-[#a67d4b]"
+            />
+            <input
+              type="number"
+              placeholder="Number of Guests"
+              min="1"
+              className="col-span-1 md:col-span-2 border border-gray-300 px-4 py-3 rounded-md bg-white text-gray-700 shadow-sm focus:outline-none focus:ring-2 focus:ring-[#a67d4b]"
             />
           </div>
-          <button className="mt-6 bg-[#a67d4b] text-white px-8 py-3 rounded-md hover:bg-[#8a6232] transition">
+          <button className="mt-6 bg-[#a67d4b] text-white px-8 py-3 rounded-md hover:bg-[#8a6232] transition shadow-md w-full md:w-auto">
             Book Now
           </button>
         </div>
+
       </div>
 
+
       {/* Map Section */}
-      <div className="w-full flex justify-center py-16 bg-white mt-10">
-        <div className="w-[80%] bg-white p-4 rounded-xl shadow-xl">
-          <iframe
-            title="Google Map"
-            width="100%"
-            height="400"
-            src="https://maps.google.com/maps?q=India&t=&z=5&ie=UTF8&iwloc=&output=embed"
-            frameBorder="0"
-            className="w-full h-full"
-          ></iframe>
+      <section className="w-full bg-[#f8f4ec] py-16">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="bg-white p-6 rounded-xl shadow-xl">
+            <h2 className="text-2xl font-bold text-[#a67d4b] mb-6">Property Location</h2>
+            <div className="rounded-lg overflow-hidden">
+              <iframe
+                title="Google Map"
+                width="100%"
+                height="300"
+                src="https://maps.google.com/maps?q=Jaipur&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                frameBorder="0"
+                className="w-full"
+                allowFullScreen
+              ></iframe>
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
+
+
 
       <Footer />
     </div>

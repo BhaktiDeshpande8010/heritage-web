@@ -24,7 +24,7 @@ const Navbar = () => {
 
         {/* Right: Sign In */}
         <div className="ml-auto flex items-center space-x-4">
-          <FaRegUserCircle className="text-2xl text-gray-700 hover:text-[#a67d4b] transition" />
+          {/* <FaRegUserCircle className="text-2xl text-gray-700 hover:text-[#a67d4b] transition" /> */}
           <button className="bg-[#a67d4b] hover:bg-[#8a6232] text-white px-4 py-1.5 rounded-md text-sm font-semibold transition">
             Sign In
           </button>
