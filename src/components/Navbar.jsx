@@ -22,8 +22,8 @@ const Navbar = () => {
           <div className="absolute left-1/2 transform -translate-x-1/2 hidden md:flex space-x-8 font-medium text-gray-800">
             <Link to="/" className="hover:text-[#a67d4b] transition">Home</Link>
             <Link to="/explore" className="hover:text-[#a67d4b] transition">Explore</Link>
-            <a href="#" className="hover:text-[#a67d4b] transition">Experiences</a>
-            <a href="#" className="hover:text-[#a67d4b] transition">About</a>
+            {/* <a href="#" className="hover:text-[#a67d4b] transition">Experiences</a> */}
+            <Link to="/about" className="hover:text-[#a67d4b] transition">About</Link>
           </div>
 
           {/* Right: Sign In */}
